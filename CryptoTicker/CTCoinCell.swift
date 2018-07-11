@@ -19,13 +19,19 @@ class CTCoinCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.layer.cornerRadius = 4
-        self.layer.masksToBounds = false
+        self.layer.masksToBounds = true
         self.layer.shadowRadius = 4;
         self.layer.shadowOpacity = 0.1;
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    
+    override func layoutSubviews() {
+        coinLogo.inputView?.clipsToBounds = true
+
+
     }
     
     required init?(coder aDecoder: NSCoder) {

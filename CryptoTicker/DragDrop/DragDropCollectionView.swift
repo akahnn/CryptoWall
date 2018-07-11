@@ -70,7 +70,7 @@ class DragDropCollectionView: UICollectionView, UIGestureRecognizerDelegate {
             draggedCellIndexPath = self.indexPathForItem(at: touchLocation)
             if (draggedCellIndexPath != nil) {
                 draggingDelegate?.dragDropCollectionViewDraggingDidBeginWithCellAtIndexPath?(draggedCellIndexPath!)
-                let draggedCell = self.cellForItem(at: draggedCellIndexPath! as IndexPath) as UICollectionViewCell!
+                let draggedCell = self.cellForItem(at: draggedCellIndexPath! as IndexPath) as UICollectionViewCell?
                 draggingView = UIImageView(image: getRasterizedImageCopyOfCell(draggedCell!))
                 draggingView!.center = (draggedCell!.center)
                 self.addSubview(draggingView!)
