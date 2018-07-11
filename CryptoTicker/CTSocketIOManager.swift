@@ -59,7 +59,6 @@ class CTSocketIOManager: NSObject {
 
                             let matchedCoin = coinArray[index] as? CTCoin
 
-                            if matchedCoin?.price != price {
                                 matchedCoin?.price = price
                                 matchedCoin?.flag = flag
 
@@ -67,7 +66,6 @@ class CTSocketIOManager: NSObject {
 
                                 self.coinCache.set(value: updatedArray, key: "coinList")
                                 self.priceDelegate?.coinPriceUpdated(updatedArray: updatedArray)
-                            }
                         }
                     }
                 }

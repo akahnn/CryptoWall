@@ -30,8 +30,6 @@ class CTCoinCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         coinLogo.inputView?.clipsToBounds = true
-
-
     }
     
     required init?(coder aDecoder: NSCoder) {
